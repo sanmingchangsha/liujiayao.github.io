@@ -8,10 +8,19 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://chenxiaosong.com/stylesheet.css" />
 </head>
@@ -19,24 +28,31 @@
 <header id="title-block-header">
 <ul>
 <li>作者: 刘佳瑶</li>
-<li>邮箱: <a href="mailto:liujiayao@liujiayao.com" class="email">liujiayao@liujiayao.com</a></li>
+<li>邮箱: <a href="mailto:liujiayao@liujiayao.com"
+class="email">liujiayao@liujiayao.com</a></li>
 </ul>
 <h1 class="title">示例</h1>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#这是一级标题"><span class="toc-section-number">1</span> 这是一级标题</a>
+<li><a href="#这是一级标题" id="toc-这是一级标题"><span
+class="toc-section-number">1</span> 这是一级标题</a>
 <ul>
-<li><a href="#这是二级标题"><span class="toc-section-number">1.1</span> 这是二级标题</a></li>
+<li><a href="#这是二级标题" id="toc-这是二级标题"><span
+class="toc-section-number">1.1</span> 这是二级标题</a></li>
 </ul></li>
-<li><a href="#这是另一个一级标题"><span class="toc-section-number">2</span> 这是另一个一级标题</a></li>
+<li><a href="#这是另一个一级标题" id="toc-这是另一个一级标题"><span
+class="toc-section-number">2</span> 这是另一个一级标题</a></li>
 </ul>
 </nav>
-<h1 data-number="1" id="这是一级标题"><span class="header-section-number">1</span> 这是一级标题</h1>
+<h1 data-number="1" id="这是一级标题"><span
+class="header-section-number">1</span> 这是一级标题</h1>
 <p>这里写上你想写的内容。</p>
-<h2 data-number="1.1" id="这是二级标题"><span class="header-section-number">1.1</span> 这是二级标题</h2>
+<h2 data-number="1.1" id="这是二级标题"><span
+class="header-section-number">1.1</span> 这是二级标题</h2>
 <p>这里再写上你想写的内容。</p>
-<h1 data-number="2" id="这是另一个一级标题"><span class="header-section-number">2</span> 这是另一个一级标题</h1>
+<h1 data-number="2" id="这是另一个一级标题"><span
+class="header-section-number">2</span> 这是另一个一级标题</h1>
 <p>这里又写上你想写的内容。</p>
 </body>
 </html>
